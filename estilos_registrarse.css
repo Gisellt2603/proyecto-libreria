@@ -1,0 +1,715 @@
+:root{
+    --primary-orange: #F28C28; 
+    --dark-bg: #2C2C2C; 
+    --light-bg: #F5F5F5; 
+    --text-dark: #333333;
+    --text-light: #FFFFFF;
+    --border-color: #E0E0E0;
+    --placeholder-gray: #D9D9D9;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    background-color: var(--light-bg);
+    color: var(--text-dark);
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+ul{
+    list-style: none;
+}
+.placeholder-gray{
+    background-color: var(--placeholder-gray);
+    border-radius: 8px;
+}
+
+/*-------------------------- CABECERA -----------------------------------*/
+.header{
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: var(--light-bg);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.header-top{
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+.logo-img {
+    height: 44px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+/* buscador */
+.search-bar{
+    display: flex;
+    width: 40%;
+}
+.search-bar input{
+    width: 100%;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px 0 0 20px;
+    outline: none;
+}
+.search-bar button{
+    padding: 10px 20px;
+    background-color: var(--primary-orange);
+    color: white;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+}
+/* acciones */
+.user-actions{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+.action-item{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--primary-orange);
+    font-size: 20px;
+}
+.action-item .text{
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    color: var(--text-light);
+}
+.action-item .text .login-link{
+    font-weight: bold;
+}
+
+/* navegación */
+.header-bottom{
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    background-color: white;
+}
+.nav-links{
+    display: flex;
+    gap: 30px;
+}
+.nav-links a{
+    color: var(--primary-orange);
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* ----------------------------------- DESPLEGABLE CATEGORIA -----------------------*/
+.nav-item.has-dropdown {
+    position: relative;
+    /* Aseguramos que el contenedor cubra todo el alto para no perder el foco */
+    padding-bottom: 10px;
+    margin-bottom: -10px;
+}
+
+.mega-menu {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-35%);
+    background-color: #ffffff;
+    width: 680px;
+    padding: 30px 35px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.22);
+    
+    /* Oculto por defecto */
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    
+    /* Agregamos una transición suave que da margen antes de cerrarse */
+    transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+    z-index: 1100;
+}
+
+/* PUENTE INVISIBLE: Evita que el cursor pierda el hover al bajar */
+.mega-menu::after {
+    content: '';
+    position: absolute;
+    top: -15px; /* Cubre el espacio en blanco hacia arriba */
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background: transparent; /* Es totalmente invisible para el usuario */
+}
+
+/* Triangulito superior blanco apuntando a la categoría */
+.mega-menu::before {
+    content: '';
+    position: absolute;
+    top: -9px;
+    left: 35%;
+    transform: translateX(-50%);
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-bottom: 9px solid #ffffff;
+    z-index: 2;
+}
+
+/* Estado activo al pasar el cursor */
+.nav-item.has-dropdown:hover .mega-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+/* Rotación suave de la flechita hacia abajo */
+.nav-item.has-dropdown:hover .nav-link-main i {
+    transform: rotate(180deg);
+}
+
+.nav-link-main i {
+    transition: transform 0.2s ease;
+}
+
+/* Distribución en 4 columnas */
+.mega-menu-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+/* Títulos naranjas de cada subcategoría */
+.menu-column h4 {
+    color: #F28C28;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+/* Enlaces de cada subcategoría */
+.menu-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.menu-column ul li a {
+    color: #444444;
+    font-size: 11.5px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    display: block;
+}
+
+.menu-column ul li a:hover {
+    color: #F28C28;
+}
+
+/* ------------------REGISTRARSE---------------*/
+
+.auth-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 5%;
+}
+
+.auth-card {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 480px; /* Tamaño exacto de la tarjeta de Figma */
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 45px 50px;
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.auth-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #2b2b2e;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.auth-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* Campos de entrada con borde redondeado y contorno sutil */
+.input-group {
+    position: relative;
+    width: 100%;
+}
+
+.input-group input {
+    width: 100%;
+    height: 44px;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    padding: 0 16px;
+    font-size: 13.5px;
+    color: #333333;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-group input:focus {
+    border-color: #F28C28;
+    box-shadow: 0 0 0 2px rgba(242, 140, 40, 0.15);
+}
+
+.input-group input::placeholder {
+    color: #a0a0a0;
+}
+
+/* Campo de contraseña con ojito */
+.password-group input {
+    padding-right: 42px; /* Espacio para que el texto no toque el ojo */
+}
+
+.btn-toggle-password {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #7a7a7a;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+.btn-toggle-password:hover {
+    color: #2b2b2e;
+}
+
+/* Botón oscuro central con texto naranja */
+.btn-auth-submit {
+    background-color: #2b2b2e;
+    color: #F28C28; /* Naranja en el texto según tu Figma */
+    border: none;
+    height: 42px;
+    border-radius: 22px;
+    font-size: 13.5px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    width: 60%;
+    align-self: center;
+}
+
+.btn-auth-submit:hover {
+    background-color: #1e1e20;
+    transform: translateY(-1px);
+}
+
+/* Enlaces inferiores */
+.auth-links {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    text-align: center;
+}
+
+.forgot-password {
+    color: #2b2b2e;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+.forgot-password:hover {
+    color: #F28C28;
+}
+
+.switch-auth {
+    font-size: 13px;
+    color: #2b2b2e;
+    font-weight: 600;
+}
+
+.highlight-link {
+    color: #F28C28;
+    text-decoration: underline;
+    font-weight: 700;
+    transition: opacity 0.2s ease;
+}
+
+.highlight-link:hover {
+    opacity: 0.85;
+}
+
+/* Adaptabilidad para móviles pequeños */
+@media (max-width: 520px) {
+    .auth-card {
+        padding: 30px 20px;
+    }
+    .btn-auth-submit {
+        width: 100%;
+    }
+}
+.register-card {
+    max-width: 520px;
+}
+
+/* Fila de 2 columnas (Nombre / Apellido, Fecha / Sexo) */
+.form-row-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    width: 100%;
+}
+
+/* Selector desplegable con estilo personalizado */
+.select-group {
+    position: relative;
+    width: 100%;
+}
+
+.select-group select {
+    width: 100%;
+    height: 44px;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    padding: 0 36px 0 16px;
+    font-size: 13.5px;
+    color: #444444;
+    outline: none;
+    background-color: #ffffff;
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease;
+}
+
+.select-group select:focus {
+    border-color: #F28C28;
+}
+
+.select-icon, .input-icon {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #7a7a7a;
+    font-size: 13px;
+    pointer-events: none;
+}
+
+/* Casillas de verificación (Checkboxes) con estética de Figma */
+.checkbox-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 6px 0;
+}
+
+.custom-checkbox {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    gap: 10px;
+}
+
+.custom-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    width: 18px;
+    height: 18px;
+    border: 1.5px solid #dcdcdc;
+    border-radius: 4px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.2s ease;
+}
+
+.custom-checkbox:hover input ~ .checkmark {
+    border-color: #F28C28;
+}
+
+.custom-checkbox input:checked ~ .checkmark {
+    background-color: #2b2b2e;
+    border-color: #2b2b2e;
+}
+
+.custom-checkbox input:checked ~ .checkmark::after {
+    content: "\f00c";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 11px;
+    color: #F28C28;
+}
+
+.checkbox-label {
+    font-size: 12px;
+    color: #333333;
+    line-height: 1.3;
+}
+
+.legal-link {
+    color: #333333;
+    text-decoration: underline;
+}
+
+.legal-link:hover {
+    color: #F28C28;
+}
+
+/* Responsive para pantallas estrechas */
+/* @media (max-width: 520px) {
+    .form-row-2 {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+} */
+
+@media (max-width: 520px) {
+    .register-card {
+        padding: 30px 20px;
+    }
+    .btn-auth-submit {
+        width: 100%;
+    }
+}
+
+
+/* --------------------------- CONTENIDO PRINCIPAL -------------------- */
+main{
+    padding: 20px 10%;
+}
+.hero-banner{
+    height: 300px;
+    margin-bottom: 40px;
+}
+.slider-container{
+    height: 250px;
+    margin-bottom: 40px;
+}
+.discoverd-grid{
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.discover-card{
+    flex: 1;
+    height: 200px;
+} 
+
+/* seccion beneficios */
+.features-section{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+.feature-card{
+    flex: 1;
+    background-color: white;
+    border: 1px solid var(--primary-orange);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+.feature-card i{
+    font-size: 30px;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+
+
+/*------------------------ RESPONSIVE ------------*/
+
+@media (max-width: 1024px) {
+    .books-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .books-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+    }
+    .discover-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+    }
+    .prev-btn { left: -8px; }
+    .next-btn { right: -8px; }
+}
+
+@media (max-width: 500px) {
+    .books-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    .discover-grid {
+        grid-template-columns: 1fr;
+    }
+    .section-title,
+    .discover-title {
+        font-size: 17px;
+    }
+}
+
+                        /* PIE DE PAGINA */
+.footer{
+    background-color: var(--primary-orange);
+    color: var(--text-dark);
+    padding: 40px 5%;
+}
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.footer-column h4{
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.footer-column ul li{
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+.social-icons i{
+    font-size: 24px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+.placeholder-icon{
+    display: inline-block;
+    background: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin-right: 5px;
+    font-size: 12px;
+    font-weight: bold;
+}
+.libro-reclamaciones{
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    width: fit-content;
+}
+@media (max-width: 768px) {
+    /* 1. La cabecera se reorganiza */
+    .header-top {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .search-bar {
+        order: 3;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* 2. Menú secundario deslizable hacia los lados */
+    .header-bottom {
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    /* 3. Libros: en lugar de 5, muestra 3 por fila */
+    .books-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+    }
+
+    /* 4. Descubre tu mundo: muestra 2 columnas */
+    .discover-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+    }
+
+    /* 5. Cajas de beneficios: 2 por fila */
+    .features-section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+    }
+
+    /* 6. Footer vertical */
+    .footer-container {
+        flex-direction: column;
+        gap: 25px;
+    }
+}
+
+/* Cuando la pantalla mide 480px o menos (Celulares) */
+@media (max-width: 480px) {
+    /* Libros: 2 por fila */
+    .books-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    /* Descubre tu mundo: 1 sola columna apilada */
+    .discover-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Beneficios: 1 por fila */
+    .features-section {
+        grid-template-columns: 1fr;
+    }
+
+    /* Ocultamos texto "Hola / Iniciar Sesión" para que quepa todo */
+    .action-item.login-box .text {
+        display: none;
+    }
+}

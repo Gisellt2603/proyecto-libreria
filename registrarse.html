@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio Sesión</title>
+    <link rel="stylesheet" href="estilos_registrarse.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <!--------------------------- CABECERA ------------------------------>
+    <header class="header">
+        <div class="header-top">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="imagenes/Logo_libreria.jpg" alt="Librería El Recreo" class="logo-img">
+                </a>
+            </div>
+            <!-- caja busqueda -->
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar Libro o Autor">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <!-- menus -->
+            <div class="user-actions">
+                <div class="action-item">
+                    <div class="text">
+                        <span class="greeting">Hola</span>
+                        <a href="iniciar_sesion.html" class="login-link"> Iniciar Sesión</a>
+                    </div>
+                    <i class="fa-regular fa-user"></i>
+                </div>
+                <div class="action-item">
+                    <a href="lista-deseos.html"><i class="fa-regular fa-heart"></i></a>
+                </div>
+                <div class="action-item">
+                    <a href="carrito.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- categorias -->
+        <nav class="header-bottom">
+            <ul class="nav-links">
+                <!-- Desplegable 1 -->
+                <li class="nav-item has-dropdown">
+                    <a href="#" class="nav-link-main">Novedades <i class="fa-solid fa-chevron-down"></i></a>
+                    
+                    <div class="mega-menu">
+                        <div class="mega-menu-content">
+                            <div class="menu-column">
+                                <h4>Nuevos</h4>
+                                <ul>
+                                    <li><a href="categoria.html">Lanzamientos Nuevos</a></li>
+                                    <li><a href="categoria.html">Preventa</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Columna 2 -->
+                            <div class="menu-column">
+                                <h4>Nuevos Autores</h4>
+                                <ul>
+                                    <li><a href="categoria.html">Autores Nuevos</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                
+                <!-- Desplegable 2 -->
+                <li class="nav-item has-dropdown">
+                    <a href="categoria.html" class="nav-link-main">Ficción <i class="fa-solid fa-chevron-down"></i></a>
+                    
+                    <!-- Contenedor del desplegable -->
+                    <div class="mega-menu">
+                        <div class="mega-menu-content">
+                            <!-- Columna 1 -->
+                            <div class="menu-column">
+                                <h4>Narrativa</h4>
+                                <ul>
+                                    <li><a href="categoria.html">Literatura clásica</a></li>
+                                    <li><a href="categoria.html">Literatura peruana</a></li>
+                                    <li><a href="categoria.html">Literatura Latinoamericana</a></li>
+                                    <li><a href="categoria.html">Literatura Universal</a></li>
+                                    <li><a href="categoria.html">Literatura en otros idiomas</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Columna 2 -->
+                            <div class="menu-column">
+                                <h4>Novelas</h4>
+                                <ul>
+                                    <li><a href="categoria.html">Ciencia ficción</a></li>
+                                    <li><a href="categoria.html">Fantasía</a></li>
+                                    <li><a href="categoria.html">Distopías</a></li>
+                                    <li><a href="categoria.html">Terror</a></li>
+                                    <li><a href="categoria.html">Románticas</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Columna 3 -->
+                            <div class="menu-column">
+                                <h4>Lírica y drama</h4>
+                                <ul>
+                                    <li><a href="categoria.html">Poesía</a></li>
+                                    <li><a href="categoria.html">Teatro</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Columna 4 -->
+                            <div class="menu-column">
+                                <h4>Comics y mangas</h4>
+                                <ul>
+                                    <li><a href="categoria.html">Cómic de heroes</a></li>
+                                    <li><a href="categoria.html">Cómic infantil</a></li>
+                                    <li><a href="categoria.html">Cómic clásico</a></li>
+                                    <li><a href="categoria.html">Humor</a></li>
+                                    <li><a href="categoria.html">Novela gráfica</a></li>
+                                    <li><a href="categoria.html">Manga Shojo</a></li>
+                                    <li><a href="categoria.html">Manga Shonen</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Desplegable 3 -->
+                <li class="nav-item has-dropdown">
+                    <a href="categoria.html" class="nav-link-main">No Ficción <i class="fa-solid fa-chevron-down"></i></a>
+                    
+                    <!-- Contenedor del desplegable -->
+                    <div class="mega-menu">
+                        <div class="mega-menu-content">
+                            <!-- Columna 1 -->
+                            <div class="menu-column">
+                                <h4>Política</h4>
+                                <ul>
+                                    <li><a href="categoria.html">Literatura clásica</a></li>
+                                    <li><a href="categoria.html">Literatura peruana</a></li>
+                                    <li><a href="categoria.html">Literatura Latinoamericana</a></li>
+                                    <li><a href="categoria.html">Literatura Universal</a></li>
+                                    <li><a href="categoria.html">Literatura en otros idiomas</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Columna 2 -->
+                            <div class="menu-column">
+                                <h4>Historia</h4>
+                                <ul>
+                                    <li><a href="categoria.html">Historia del Perú</a></li>
+                                    <li><a href="categoria.html">Fantasía</a></li>
+                                    <li><a href="categoria.html">Distopías</a></li>
+                                    <li><a href="categoria.html">Terror</a></li>
+                                    <li><a href="categoria.html">Románticas</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Columna 3 -->
+                            <div class="menu-column">
+                                <h4>Ciencia</h4>
+                                <ul>
+                                    <li><a href="categoria.html">Química</a></li>
+                                    <li><a href="categoria.html">Medicina</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Columna 4 -->
+                            <div class="menu-column">
+                                <h4>Cocina</h4>
+                                <ul>
+                                    <li><a href="categoria.html">Cómic de heroes</a></li>
+                                    <li><a href="categoria.html">Cómic infantil</a></li>
+                                    <li><a href="categoria.html">Cómic clásico</a></li>
+                                    <li><a href="categoria.html">Humor</a></li>
+                                    <li><a href="categoria.html">Novela gráfica</a></li>
+                                    <li><a href="categoria.html">Manga Shojo</a></li>
+                                    <li><a href="categoria.html">Manga Shonen</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Desplegable 4 -->
+                <li class="nav-item has-dropdown">
+                    <a href="categoria.html" class="nav-link-main">Infantil <i class="fa-solid fa-chevron-down"></i></a>
+                    
+                    <!-- Contenedor del desplegable -->
+                    <div class="mega-menu">
+                        <div class="mega-menu-content">
+                            <!-- Columna 1 -->
+                            <div class="menu-column">
+                                <h4>Cuentos</h4>
+                                <ul>
+                                    <li><a href="categoria.html">Ceuntos Peruanos</a></li>
+                                    <li><a href="categoria.html">Leyendas</a></li>
+                                    <li><a href="categoria.html">Abecedario</a></li>
+                                    <li><a href="categoria.html">Geografía</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Columna 2 -->
+                            <div class="menu-column">
+                                <h4>Académicos</h4>
+                                <ul>
+                                    <li><a href="categoria.html">Repaso de literatura</a></li>
+                                    <li><a href="categoria.html">Matemáticos</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Columna 3 -->
+                            <div class="menu-column">
+                                <h4>Psicología</h4>
+                                <ul>
+                                    <li><a href="categoria.html">Prelectura</a></li>
+                                    <li><a href="categoria.html">Prelectura</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Columna 4 -->
+                            <div class="menu-column">
+                                <h4>Historias</h4>
+                                <ul>
+                                    <li><a href="categoria.html">Cuentos para niños</a></li>
+                                    <li><a href="categoria.html">Materiales de arte</a></li>
+                                    <li><a href="categoria.html">Cómic clásico</a></li>
+                                    <li><a href="categoria.html">Valores</a></li>
+                                    <li><a href="categoria.html">Comics educativos</a></li>
+                                    <li><a href="categoria.html">Manualidades</a></li>
+                                    <li><a href="categoria.html">Cultura</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Desplegable 5 -->
+                <li class="nav-item has-dropdown">
+                    <a href="categoria.html" class="nav-link-main">Juvenil <i class="fa-solid fa-chevron-down"></i></a>
+                    
+                    <!-- Contenedor del desplegable -->
+                    <div class="mega-menu">
+                        <div class="mega-menu-content">
+                            <!-- Columna 1 -->
+                            <div class="menu-column">
+                                <h4>Comics y Mangas</h4>
+                                <ul>
+                                    <li><a href="categoria.html">Shojo</a></li>
+                                    <li><a href="categoria.html">Shonen</a></li>
+                                    <li><a href="categoria.html">Isekai</a></li>
+                                    <li><a href="categoria.html">Yaoi</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Columna 2 -->
+                            <div class="menu-column">
+                                <h4>Literatura Juvenil</h4>
+                                <ul>
+                                    <li><a href="categoria.html">Teror y Misterio</a></li>
+                                    <li><a href="categoria.html">Ciencia ficción</a></li>
+                                    <li><a href="categoria.html">Boys Love</a></li>
+                                    <li><a href="categoria.html">Drama</a></li>
+                                    <li><a href="categoria.html">Romance</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Columna 3 -->
+                            <div class="menu-column">
+                                <h4>Romance</h4>
+                                <ul>
+                                    <li><a href="categoria.html">Romance maduro</a></li>
+                                    <li><a href="categoria.html">Romance aloescente</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Columna 4 -->
+                            <div class="menu-column">
+                                <h4>Fantasia</h4>
+                                <ul>
+                                    <li><a href="categoria.html">Monster Romance</a></li>
+                                    <li><a href="categoria.html">Distopías</a></li>
+                                    <li><a href="categoria.html">Terror Psicológico</a></li>
+                                    <li><a href="categoria.html">Dramna adolescente</a></li>
+                                    <li><a href="categoria.html">Clasicos</a></li>
+                                    <li><a href="categoria.html">Wattpad</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Desplegable 6 -->
+                <li class="nav-item has-dropdown">
+                    <a href="categoria.html" class="nav-link-main">Productos <i class="fa-solid fa-chevron-down"></i></a>
+                    
+                    <!-- Contenedor del desplegable -->
+                    <div class="mega-menu">
+                        <div class="mega-menu-content">
+                            <!-- Columna 1 -->
+                            <div class="menu-column">
+                                <h4>Material de arte</h4>
+                                <ul>
+                                    <li><a href="categoria.html">Utiles escolares</a></li>
+                                    <li><a href="categoria.html">Objetos de lectura</a></li>
+                                    <li><a href="categoria.html">Organizadores</a></li>
+                                    <li><a href="categoria.html">Papeleria</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Columna 2 -->
+                            <div class="menu-column">
+                                <h4>Juegos de mesa</h4>
+                                <ul>
+                                    <li><a href="categoria.html">Juegos clásicos</a></li>
+                                    <li><a href="categoria.html">Juegos de estrategia</a></li>
+                                    <li><a href="categoria.html">Juegos cooperativos</a></li>
+                                    <li><a href="categoria.html">Juegos de rol</a></li>
+                                    <li><a href="categoria.html">Juegos familiar</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Columna 3 -->
+                            <div class="menu-column">
+                                <h4>Merchandising</h4>
+                                <ul>
+                                    <li><a href="categoria.html">Decoración</a></li>
+                                    <li><a href="categoria.html">Peluches</a></li>
+                                    <li><a href="categoria.html">Coleccionables</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Columna 4 -->
+                            <div class="menu-column">
+                                <h4>Rompecabezas</h4>
+                                <ul>
+                                    <li><a href="categoria.html">Rompecabezas fáciles</a></li>
+                                    <li><a href="categoria.html">Rompecabezas de 1000 piezas</a></li>
+                                    <li><a href="categoria.html">Rompecabezas de madera</a></li>
+                                    <li><a href="categoria.html">Rompecabezas para niños</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="auth-main">
+
+        <!-- Cuadro Central de Registrarse -->
+        <section class="auth-card register-card">
+            <h2 class="auth-title">Registrarse</h2>
+            
+            <form class="auth-form" action="#" method="POST">
+                <!-- Fila 1: Nombre y Apellido -->
+                <div class="form-row-2">
+                    <div class="input-group">
+                        <input type="text" placeholder="Nombre" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" placeholder="Apellido" required>
+                    </div>
+                </div>
+
+                <!-- Fila 2: Fecha de nacimiento y Sexo -->
+                <div class="form-row-2">
+                    <div class="input-group date-group">
+                        <input type="text" placeholder="Fecha de nacimiento" onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'" required>
+                        <i class="fa-regular fa-calendar input-icon"></i>
+                    </div>
+                    <div class="input-group select-group">
+                        <select required>
+                            <option value="" disabled selected hidden>Sexo</option>
+                            <option value="femenino">Femenino</option>
+                            <option value="masculino">Masculino</option>
+                            <option value="otro">Otro</option>
+                            <option value="no-especificar">Prefiero no decir</option>
+                        </select>
+                        <i class="fa-solid fa-chevron-down select-icon"></i>
+                    </div>
+                </div>
+
+                <!-- Fila 3: Teléfono -->
+                <div class="input-group">
+                    <input type="tel" placeholder="Teléfono" required>
+                </div>
+
+                <!-- Fila 4: Casillas de verificación (Checkboxes) -->
+                <div class="checkbox-container">
+                    <label class="custom-checkbox">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="checkbox-label">Acepto recibir publicidad comercial y promocional</span>
+                    </label>
+                    <label class="custom-checkbox">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="checkbox-label">Permitir compra con asistencia remota</span>
+                    </label>
+                    <label class="custom-checkbox">
+                        <input type="checkbox" required>
+                        <span class="checkmark"></span>
+                        <span class="checkbox-label">Declaro conocer y <a href="#" class="legal-link">aceptar la política de privacidad</a></span>
+                    </label>
+                </div>
+
+                <!-- Fila 5: Correo electrónico -->
+                <div class="input-group">
+                    <input type="email" placeholder="Correo electrónico" required>
+                </div>
+
+                <!-- Fila 6: Contraseña -->
+                <div class="input-group password-group">
+                    <input type="password" id="registerPassword" placeholder="Contraseña" required>
+                    <button type="button" class="btn-toggle-password" data-target="registerPassword" aria-label="Mostrar u ocultar contraseña">
+                        <i class="fa-regular fa-eye"></i>
+                    </button>
+                </div>
+
+                <!-- Fila 7: Confirmar Contraseña -->
+                <div class="input-group password-group">
+                    <input type="password" id="confirmPassword" placeholder="Confirmar contraseña" required>
+                    <button type="button" class="btn-toggle-password" data-target="confirmPassword" aria-label="Mostrar u ocultar contraseña">
+                        <i class="fa-regular fa-eye"></i>
+                    </button>
+                </div>
+
+                <!-- Botón Registrarse -->
+                <button type="submit" class="btn-auth-submit">Registrarse</button>
+            </form>
+
+            <!-- Enlace alternativo inferior -->
+            <div class="auth-links">
+                <p class="switch-auth">
+                    ¿Ya tienes una cuenta? <a href="iniciar_sesion.html" class="highlight-link">Iniciar sesión</a>
+                </p>
+            </div>
+        </section>
+        
+        <!-------------------------  BENEFICIOS------------->
+        <section class="features-section">
+            <div class="feature-card">
+                <i class="fa-solid fa-location-dot"></i>
+                <h4>Recojo en tienda</h4>
+                <p>Ubica tu tienda más cercana</p>
+            </div>
+            <div class="feature-card">
+                <i class="fa-solid fa-headset"></i>
+                <h4>Atención al cliente</h4>
+                <p>Consulta con nuestro equipo</p>
+            </div>
+            <div class="feature-card">
+                <i class="fa-regular fa-heart"></i>
+                <h4>Wishlist</h4>
+                <p>Guarda tus productos favoritos</p>
+            </div>
+            <div class="feature-card">
+                <i class="fa-solid fa-truck"></i>
+                <h4>Seguimiento</h4>
+                <p>Realiza el seguimiento de tus productos</p>
+            </div>
+        </section>
+    </main>
+    
+
+    <!------------------------- FOOTER ----------------->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4>Síguenos en redes sociales</h4>
+                <div class="social-icons">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-tiktok"></i>
+                    <i class="fa-brands fa-x-twitter"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+                <h4>Métodos de pago:</h4>
+                <div class="payment-icons">
+                    <span class="placeholder-icon">VISA</span>
+                    <span class="placeholder-icon">MC</span>
+                    <span class="placeholder-icon">PayPal</span>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h4>Política</h4>
+                <ul>
+                    <li><a href="#">Políticas de privacidad</a></li>
+                    <li><a href="#">Políticas de Cookies</a></li>
+                    <li><a href="#">Política de Cambios y Devoluciones</a></li>
+                </ul>
+                <br>
+                <h4>Sobre nosotros</h4>
+                <ul>
+                    <li><a href="#">¿Quienes somos?</a></li>
+                    <li><a href="#">Nuestras tiendas</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Términos y condiciones</h4>
+                <ul>
+                    <li><a href="#">Términos y condiciones del usuario</a></li>
+                    <li><a href="#">Términos y condiciones Cuotas sin intereses</a></li>
+                    <li><a href="#">Términos y condiciones Promocionales</a></li>
+                    <li><a href="#">Términos y condiciones La Ruta Literaria</a></li>
+                </ul>
+                <br>
+                <h4>Libro de reclamaciones</h4>
+                <div class="libro-reclamaciones placeholder-icon">
+                    Libro de Reclamaciones
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

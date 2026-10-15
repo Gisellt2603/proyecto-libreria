@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Carrito - Librería El Recreo</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ================= CABECERA ================= -->
+    <header class="header">
+        <div class="header-top">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="imagenes/Logo_libreria.jpg" alt="Librería El Recreo" class="logo-img">
+                </a>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar Libro o Autor">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <div class="user-actions">
+                <div class="action-item">
+                    <div class="text">
+                        <span class="greeting">Hola</span>
+                        <a href="iniciar_sesion.html" class="login-link">Iniciar Sesión</a>
+                    </div>
+                    <i class="fa-regular fa-user"></i>
+                </div>
+                <div class="action-item">
+                    <a href="lista-deseos.html"><i class="fa-regular fa-heart"></i></a>
+                </div>
+                <div class="action-item">
+                    <a href="carrito.html"><i class="fa-solid fa-cart-shopping" style="color: var(--primary-orange);"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="header-bottom">
+            <ul class="nav-links">
+                <li><a href="#">Novedades <i class="fa-solid fa-chevron-down"></i></a></li>
+                <li><a href="categoria_libro.html">Ficción <i class="fa-solid fa-chevron-down"></i></a></li>
+                <li><a href="categoria_libro.html">No Ficción <i class="fa-solid fa-chevron-down"></i></a></li>
+                <li><a href="categoria_libro.html">Infantil <i class="fa-solid fa-chevron-down"></i></a></li>
+                <li><a href="categoria_libro.html">Juvenil <i class="fa-solid fa-chevron-down"></i></a></li>
+                <li><a href="#">Productos <i class="fa-solid fa-chevron-down"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ================= CUERPO PRINCIPAL ================= -->
+    <main class="carrito-main">
+        <h1 class="carrito-titulo">Mi Carrito</h1>
+
+        <!-- Cabecera de la tabla de productos -->
+        <div class="cart-table-header">
+            <span class="col-prod">Producto</span>
+            <span class="col-precio">Precio</span>
+            <span class="col-cant">Cant.</span>
+            <span class="col-subtotal">Subtotal</span>
+            <span class="col-borrar">Borrar</span>
+        </div>
+
+        <!-- Contenedor dinámico de filas del carrito -->
+        <div class="cart-items-container" id="contenedorCarrito">
+            <!-- JavaScript llenará los productos aquí -->
+        </div>
+
+        <!-- Tarjeta de Resumen de Compra -->
+        <section class="cart-summary-card">
+            <div class="summary-left">
+                <h2 class="summary-title">RESUMEN DE COMPRA</h2>
+                <div class="coupon-box">
+                    <input type="text" placeholder="Cupon de descuento">
+                    <button type="button" class="btn-coupon">Aplicar</button>
+                </div>
+            </div>
+
+            <div class="summary-right">
+                <div class="summary-line">
+                    <span class="label">Subtotal</span>
+                    <span class="amount" id="cartSubtotalText">S/00,00</span>
+                </div>
+                <div class="summary-line total-line">
+                    <span class="label">Total</span>
+                    <span class="amount" id="cartTotalText">S/00,00</span>
+                </div>
+                <button type="button" class="btn-checkout">Finalizar Compra</button>
+            </div>
+        </section>
+
+        <!-- Beneficios -->
+        <section class="features-section">
+            <div class="feature-card">
+                <i class="fa-solid fa-location-dot"></i>
+                <h4>Recojo en tienda</h4>
+                <p>Ubica tu tienda más cercana</p>
+            </div>
+            <div class="feature-card">
+                <i class="fa-solid fa-headset"></i>
+                <h4>Atención al cliente</h4>
+                <p>Consulta con nuestro equipo</p>
+            </div>
+            <div class="feature-card">
+                <i class="fa-regular fa-heart"></i>
+                <h4>Wishlist</h4>
+                <p>Guarda tus productos favoritos</p>
+            </div>
+            <div class="feature-card">
+                <i class="fa-solid fa-truck"></i>
+                <h4>Seguimiento</h4>
+                <p>Realiza el seguimiento de tus productos</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4>Síguenos en redes sociales</h4>
+                <div class="social-icons">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-tiktok"></i>
+                    <i class="fa-brands fa-x-twitter"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+                <h4>Métodos de pago:</h4>
+                <div class="payment-icons">
+                    <span class="placeholder-icon">VISA</span>
+                    <span class="placeholder-icon">MC</span>
+                    <span class="placeholder-icon">PayPal</span>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h4>Política</h4>
+                <ul>
+                    <li><a href="#">Políticas de privacidad</a></li>
+                    <li><a href="#">Políticas de Cookies</a></li>
+                    <li><a href="#">Política de Cambios y Devoluciones</a></li>
+                </ul>
+                <br>
+                <h4>Sobre nosotros</h4>
+                <ul>
+                    <li><a href="#">¿Quienes somos?</a></li>
+                    <li><a href="#">Nuestras tiendas</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Términos y condiciones</h4>
+                <ul>
+                    <li><a href="#">Términos y condiciones del usuario</a></li>
+                    <li><a href="#">Términos y condiciones Cuotas sin intereses</a></li>
+                    <li><a href="#">Términos y condiciones Promocionales</a></li>
+                    <li><a href="#">Términos y condiciones La Ruta Literaria</a></li>
+                </ul>
+                <br>
+                <h4>Libro de reclamaciones</h4>
+                <div class="libro-reclamaciones placeholder-icon">Libro de Reclamaciones</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts en orden -->
+    <script src="datos_libros.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
